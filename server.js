@@ -1,4 +1,5 @@
 import express from "express"
+import dotenv from "dotenv"
 import mongoose from "mongoose"
 import cors from "cors"
 import { unauthorizedErrorHandler, forbiddenErrorHandler,notFoundErrorHandler, genericErroHandler  } from "./errorHandlers/errorHandlers.js"
@@ -6,6 +7,7 @@ import booksRouter from "./routes/books.js"
 
 
 const server = express()
+dotenv.config()
 const port = process.env.PORT || 7001
 
 
